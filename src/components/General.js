@@ -5,7 +5,6 @@ class General extends React.Component {
     return (
       <div className="general-info">
         <div className="header">General</div>
-
         <Name />
         <Email />
         <Phone />
