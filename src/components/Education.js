@@ -41,8 +41,8 @@ class YearOfStudy extends React.Component {
       <div className="year-of-study">
         <label for="year-of-study">Year of Study: </label>
         <div id="year-of-study">
-          <input type="text" id="start-year" placeholder="Starting Year" />
-          <input type="text" id="end-year" placeholder="Finishing Year" />
+          <input type="text" id="start-year" placeholder="From" />
+          <input type="text" id="end-year" placeholder="To" />
         </div>
       </div>
     );

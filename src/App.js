@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar";
 import General from "./components/General";
 import Education from "./components/Education";
+import Experience from "./components/Experience";
 
 import "./components/components.css";
 
@@ -11,6 +12,7 @@ function App() {
       <div className="stuff">
         <General />
         <Education />
+        <Experience />
       </div>
     </div>
   );

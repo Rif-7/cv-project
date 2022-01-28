@@ -16,11 +16,12 @@
     margin: 0px;
 }
 
-.general-info, .educational-info {
+.general-info,
+.educational-info,
+.experience-info {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     gap: 8px;
     margin-top: 10px;
     padding: 10px;
@@ -41,7 +42,9 @@
     gap: 8px;
 }
 
-.general-info input, .educational-info input {
+.general-info input, 
+.educational-info input,
+.experience-info input {
     font-family: inherit;
     font-weight: 500;
     font-size: 18px;
@@ -53,13 +56,17 @@
     text-align: center;
 }
 
-.general-info input:focus, .educational-info input:focus {
+.general-info input:focus, 
+.educational-info input:focus,
+.experience-info input:focus {
     border-bottom: 2px solid #3882f6;
     /* box-shadow: 0px 5px 5px #1f2937;
     border-bottom: #1f2937;  */
 }
 
-.general-info label, .educational-info label {
+.general-info label, 
+.educational-info label,
+.experience-info label {
     display: block;
     font-size: 20px;
     margin-bottom: 4px;
@@ -69,7 +76,8 @@
     margin-top: 10px;
 }
 
-#year-of-study {
+#year-of-study,
+.working-time {
     display: flex;
     gap: 8px;
 }
