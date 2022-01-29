@@ -2,7 +2,7 @@ body {
     margin: 0px;
 }
 
-.stuff {
+.container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
