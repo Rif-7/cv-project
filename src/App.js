@@ -68,11 +68,13 @@ class App extends React.Component {
           <Education changeEducation={this.changeEducation} />
           <Experience changeExperience={this.changeExperience} />
         </div>
-        <Preview
-          general={this.state.general}
-          education={this.state.education}
-          experience={this.state.experience}
-        />
+        <div>
+          <Preview
+            general={this.state.general}
+            education={this.state.education}
+            experience={this.state.experience}
+          />
+        </div>
       </div>
     );
   }
