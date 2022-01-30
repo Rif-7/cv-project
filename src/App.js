@@ -14,23 +14,23 @@ class App extends React.Component {
 
     this.state = {
       general: {
-        firstName: "",
-        lastName: "",
-        email: "",
-        phone: "",
+        firstName: "John",
+        lastName: "Doe",
+        email: "example@company.com",
+        phone: "1234567890",
       },
       education: {
-        schoolName: "",
-        educationalTitle: "",
-        educationStart: "",
-        educationEnd: "",
+        schoolName: "ABC School",
+        educationalTitle: "High School",
+        educationStart: "2003",
+        educationEnd: "2007",
       },
       experience: {
-        companyName: "",
-        positionTitle: "",
-        jobTasks: "",
-        workStart: "",
-        workEnd: "",
+        companyName: "XYZ Company",
+        positionTitle: "Software Engineer",
+        jobTasks: "Manage Database",
+        workStart: "2015",
+        workEnd: "2020",
       },
     };
   }
@@ -68,13 +68,11 @@ class App extends React.Component {
           <Education changeEducation={this.changeEducation} />
           <Experience changeExperience={this.changeExperience} />
         </div>
-        <div>
-          <Preview
-            general={this.state.general}
-            education={this.state.education}
-            experience={this.state.experience}
-          />
-        </div>
+        <Preview
+          general={this.state.general}
+          education={this.state.education}
+          experience={this.state.experience}
+        />
       </div>
     );
   }
