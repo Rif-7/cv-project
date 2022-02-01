@@ -6,78 +6,66 @@ import Preview from "./components/Preview";
 
 import "./components/components.css";
 
-import React from "react";
+import React, { useState } from "react";
 
-class App extends React.Component {
-  constructor() {
-    super();
+function App() {
+  const [general, setGeneral] = useState({
+    firstName: "John",
+    lastName: "Doe",
+    email: "example@company.com",
+    phone: "1234567890",
+  });
 
-    this.state = {
-      general: {
-        firstName: "John",
-        lastName: "Doe",
-        email: "example@company.com",
-        phone: "1234567890",
-      },
-      education: {
-        schoolName: "ABC School",
-        educationalTitle: "High School",
-        educationStart: "2003",
-        educationEnd: "2007",
-      },
-      experience: {
-        companyName: "XYZ Company",
-        positionTitle: "Software Engineer",
-        jobTasks: "Manage Database",
-        workStart: "2015",
-        workEnd: "2020",
-      },
-    };
-  }
+  const [education, setEducation] = useState({
+    schoolName: "ABC School",
+    educationalTitle: "High School",
+    educationStart: "2003",
+    educationEnd: "2007",
+  });
 
-  changeGeneral = (e) => {
-    const newGeneral = Object.assign({}, this.state.general);
+  const [experience, setExperience] = useState({
+    companyName: "XYZ Company",
+    positionTitle: "Software Engineer",
+    jobTasks: "Manage Database",
+    workStart: "2015",
+    workEnd: "2020",
+  });
+
+  const changeGeneral = (e) => {
+    const newGeneral = Object.assign({}, general);
     newGeneral[e.target.getAttribute("name")] = e.target.value;
-    this.setState({
-      general: newGeneral,
-    });
+    setGeneral(newGeneral);
   };
 
-  changeEducation = (e) => {
-    const newEducation = Object.assign({}, this.state.education);
+  const changeEducation = (e) => {
+    const newEducation = Object.assign({}, education);
     newEducation[e.target.getAttribute("name")] = e.target.value;
-    this.setState({
-      education: newEducation,
-    });
+    setEducation(newEducation);
   };
 
-  changeExperience = (e) => {
-    const newExperience = Object.assign({}, this.state.experience);
+  const changeExperience = (e) => {
+    const newExperience = Object.assign({}, experience);
     newExperience[e.target.getAttribute("name")] = e.target.value;
-    this.setState({
-      experience: newExperience,
-    });
+    setExperience(newExperience);
   };
 
-  render() {
-    return (
-      <div>
-        <Navbar />
-        <div className="container">
-          <General changeGeneral={this.changeGeneral} />
-          <Education changeEducation={this.changeEducation} />
-          <Experience changeExperience={this.changeExperience} />
-        </div>
-        <div>
-          <Preview
-            general={this.state.general}
-            education={this.state.education}
-            experience={this.state.experience}
-          />
-        </div>
+  return (
+    <div>
+      <Navbar />
+      <div className="container">
+        <General changeGeneral={changeGeneral} />
+        <Education changeEducation={changeEducation} />
+        <Experience changeExperience={changeExperience} />
       </div>
-    );
-  }
+      <div>
+        <Preview
+          general={general}
+          education={education}
+          experience={experience}
+        />
+      </div>
+    </div>
+  );
 }
 
 export default App;
