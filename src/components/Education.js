@@ -1,5 +1,3 @@
-import React from "react";
-
 function Education(props) {
   const { changeEducation } = props;
   return (

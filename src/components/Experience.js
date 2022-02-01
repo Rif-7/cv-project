@@ -1,5 +1,3 @@
-import React from "react";
-
 function Experience(props) {
   const { changeExperience } = props;
   return (

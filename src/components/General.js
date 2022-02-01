@@ -1,5 +1,3 @@
-import React from "react";
-
 function General(props) {
   const { changeGeneral } = props;
   return (
